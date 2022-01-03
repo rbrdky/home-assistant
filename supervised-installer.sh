@@ -71,7 +71,7 @@ fi
 if [ ! -f "$FILE_DOCKER_CONF" ]; then
   # Write default configuration
   info "Creating default docker daemon configuration $FILE_DOCKER_CONF"
-  curl -sL ${URL_DOCKER_DAEMON} > "${FILE_DOCKER_CONF}"
+  sudo curl -sL ${URL_DOCKER_DAEMON} > "${FILE_DOCKER_CONF}"
 
   # Restart Docker service
   info "Restarting docker service"
